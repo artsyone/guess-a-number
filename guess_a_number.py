@@ -7,7 +7,7 @@ high = 100
 limit = 10
 
 rand = random.randint(low,high)
-print("I'm thinking of a number from " + str(low) + "  to " + str(high)+ ".");
+print("I'm thinking of a number from " + str(low) +  "  to " + str(high)+  ".");
 
 #helper fuctions
 def get_guess():
@@ -19,29 +19,42 @@ def get_guess():
             return guess
         else:
             print("You must enter a number.")
+def play_again():
+    while True:
+        decision = input("Would you like to play again? (y/n)")
+
+        if decision == 'y' or decision == 'yes':
+            return True
+        elif decision == 'n' or decision == 'no' :
+            return False
+        else:
+            print( "I dont understand please enter 'y' or 'n'.")
+again = True
+while again:
         
-# start game
-rand = random.randint(low,high)
-print("Im thinking of a number from" +str(low) + " to " + str(high) +". You have" + str(limit) + "tries to guess it.")
+        # start game
+        rand = random.randint(low,high)
+        print("Im thinking of a number from " +str(low) + " to " + str(high) + ". You have " + str(limit) + " tries to guess it.")
 
-guess = -1
-tries=0
+        guess = -1
+        tries=0
 
-# play game 
-while guess != rand and tries < limit:
-    guess = get_guess()
-    
-    if guess < rand:
-        print("You guessed too low.")
-    elif guess > rand:
-        print("You guessed too high.")
-    else:
-        print("You got it!")
+        # play game 
+        while guess != rand and tries < limit:
+            guess = get_guess()
+            
+            if guess < rand:
+                print("You guessed too low.")
+            elif guess > rand:
+                print("You guessed too high.")
+            else:
+                print("You got it!")
 
-    tries += 1
+            tries += 1
 
-#game end
-if guess == rand:
-    print( "Way to go. You can guess!")
-else:
-    print( " Way to go, you suck the number was " + str(rand) + ".")
+    #game end
+        if guess == rand:
+            print( "Way to go. You can guess!")
+        else:
+            print( " Way to go, you suck the number was " + str(rand) + ".")
+        again = play_again()
