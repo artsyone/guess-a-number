@@ -3,15 +3,14 @@
 
 
 
-
-
+import time
 import random
 
 # config
 import math
 
 low = 1
-high = 100
+high = 1000
 limit = math.ceil (math.log( high - low + 1 ,2))
 
 # helper functions
@@ -37,30 +36,64 @@ def show_credits():
     \____/\__,_/_/ /_/ /_/\___/   \____/ |___/\___/_/ """)
 
     
-    print("This awesome game was created by Sav Shav.")
+    print("This awesome game was created by Savanna S.")
     
 def get_guess(current_low, current_high):
     """
     Returns a truncated average of the current low and high
     """
-    pass
+    guess = (current_high + current_low )//2
+   
+    return guess 
 
 def pick_number():
     """
     Ask the player to pick a number and waits until the player
     confirms they have a number by pressing enter.
     """
-    pass
+   
+    print( " Think of a number from " +  str(low) + " to " + str(high) + " . Im going to try to guess it. " )
+    print ("   ")
+    time.sleep(1)
+    print("Press enter to contine")
+    print ("   ")
+    input ()
 
+
+    
+
+   
+    
 def check_guess(guess):
     """
     Ask the player if the computer's number was too high, too low,
     or just right.
+    
     Returns -1 if the guess was too low
              0 if the guess was correct
              1 if the guess was too high
     """
-    pass
+    
+   
+    while True:
+        print (" Is the number " + str(guess) + "." )
+        print ("   ")
+        time.sleep(1) 
+
+        decision = input(" Is the number your thinking of... Enter (lower / higher / yes)")
+        print("")
+        
+        if decision == 'low' or decision == 'lower'or decision == 'lower' or decision == 'l':
+            return 1
+        elif decision == 'high' or decision == 'higher'or decision == 'h':
+            return -1
+        elif decision == 'yes'or decision == 'yes'or decision == 'yeah' or decision == 'y':
+            print("Haha I got it.")
+            print("")
+            return 0
+
+            
+    
 
 def show_result():
     pass
@@ -68,6 +101,7 @@ def show_result():
 def play_again():
     while True:
         decision = input("Would you like to play again? (y/n) ")
+        
 
         if decision == 'y' or decision == 'yes':
             return True
@@ -80,6 +114,8 @@ def play():
     current_low = low
     current_high = high
     result = -1
+
+ 
     
     pick_number()
     
@@ -88,12 +124,12 @@ def play():
 
         result = check_guess(guess)
 
-        if result == -1:
-            # adjust current high
-            pass
-        elif result == 1:
-            # adjust current low
-            pass
+        if result == -1 :         
+            current_low = guess + 1 
+            
+        elif result == 1 :
+             current_high = guess - 1  
+            
 
     show_result()
 
