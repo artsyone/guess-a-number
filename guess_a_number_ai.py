@@ -1,8 +1,4 @@
 
-
-
-
-
 import time
 import random
 
@@ -12,9 +8,6 @@ tries = 1
 
 # helper functions
 
-
-
-
 def show_start_screen():
     
     print("""   ______                        ___       _   __                __             
@@ -23,8 +16,7 @@ def show_start_screen():
 / /_/ / /_/ /  __(__  |__  )  / ___ |   / /|  / /_/ / / / / / / /_/ /  __/ /    
 \____/\__,_/\___/____/____/  /_/  |_|  /_/ |_/\__,_/_/ /_/ /_/_.___/\___/_/     
                                                                                 """)
-    print("")
-  
+    print("") 
 
 def show_credits():
     print("""       ______                        ____                 
@@ -50,7 +42,6 @@ def pick_low():
         print("Please enter the numbers we will play between " + str(name) + ".")
         print(" Enter the low ")
         low = input()
-        
 
         return int(low) 
        
@@ -83,11 +74,6 @@ def pick_number(current_low,current_high,name):
     print("Press enter to contine " + str(name) + ".")
     print ("   ")
     input ()
-
-
-    
-
-   
     
 def check_guess(guess):
     """
