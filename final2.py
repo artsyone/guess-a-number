@@ -1,9 +1,9 @@
 from turtle import *
 
-window_height()
-400
-window_width ()
-640
+
+
+setup( width = 1000, height = 600)
+
 
 
 speed(0)
@@ -11,30 +11,17 @@ shape("turtle")
 pensize(1)
 
 
-
-
-
+ht()
+penup()
+setpos(0,-300)
+pendown()
     
-
 
 
 def draw_circle(d, c, p):
     color(c)
     pensize(p)
-    
-    circle(d)
-
-    ht()
-    speed(0)
-    penup()
-    setpos(0,-300)
-    penup()
-    pendown()
-    
-    count = 0
-
-
-    
+    circle(d)   
 def draw_all_circles(c1,c2,c3,c4,c5,c6,c7,c8):
      
     for i in range (10,100,10):
