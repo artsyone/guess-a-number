@@ -1,6 +1,12 @@
 from turtle import *
 
 
+def close(x,y):
+        exitonclick()
+      
+onscreenclick(close)
+
+ 
 
 setup( width = 1000, height = 600)
 
@@ -69,7 +75,7 @@ def k2():
 onkey(k1, "Up")
 onkey(k2, "space")
 
-    
+
 
 listen()
 mainloop()
