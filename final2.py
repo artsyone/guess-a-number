@@ -1,5 +1,5 @@
 from turtle import *
-
+import random
 
 def close(x,y):
         exitonclick()
@@ -71,9 +71,23 @@ def k1():
 def k2():
     bgcolor("black")
     
-
+def circle(radius):
+        circle(random)
+            
+        while True:
+                
+                if circle(radius) > 20 :
+                    color("maroon")
+                 
+        
+                else:
+                   color("purple")
+             
+                
+                   
 onkey(k1, "Up")
 onkey(k2, "space")
+onkey(k3, "Down")
 
 
 
