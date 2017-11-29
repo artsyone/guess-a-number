@@ -144,22 +144,25 @@ def stars():
            angle = 144
            
            pensize(random.randint(0,5))
-           setpos(random.randint(400,-400))
-           color("blue")
+           
         
 def more_stars():   
     for i in range(4):
-           color("blue")
+           color("yellow")
            fd(100)
            lt(216)
            pensize(random.randint(0,5))
-           setpos(random.randint(-400,400))
-   
+         
+
+def k3():
+    bgcolor("black")   
                 
                    
 onkey(k1, "Up")
 onkey(k2, "space")
+onkey(k3, "\n")
 onkey(stars, "Left")
+onkey(more_stars, "Right")
 onkey(more_stars, "Right")
 
 
