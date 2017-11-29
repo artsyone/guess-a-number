@@ -1,7 +1,6 @@
 from turtle import *
 import random
-sam = Turtle()
-bob = Turtle()
+
 
 def close(x,y):
         exitonclick()
@@ -163,7 +162,7 @@ onkey(k2, "space")
 onkey(k3, "\n")
 onkey(stars, "Left")
 onkey(more_stars, "Right")
-onkey(more_stars, "Right")
+
 
 
 
